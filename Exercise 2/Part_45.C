@@ -98,6 +98,8 @@ TProfile *prof_track_R4_pT_npv = new TProfile(
       200
   );
 
+  int nentries, nbytes, i;
+  nentries = (Int_t)tree->GetEntries();
 
 for (i = 0; i < nentries; i++) {
   nbytes = tree->GetEntry(i);
@@ -176,3 +178,5 @@ prof_track_R4_pT_npv->SetMarkerColor(4);
 prof_track_R4_pT_npv->Draw();
 canvas->Print("Profile Track-jet R4 pT vs. NPV.pdf");
 canvas->Clear();
+
+}
