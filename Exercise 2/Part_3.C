@@ -333,7 +333,8 @@ TProfile *prof_truth_R10_Trimmed_pT_npv = new TProfile(
       50
   );
 
-
+  int nentries, nbytes, i;
+  nentries = (Int_t)tree->GetEntries();
 
   for (i = 0; i < nentries; i++) {
     nbytes = tree->GetEntry(i);
@@ -528,3 +529,5 @@ prof_truth_R10_Trimmed_pT_npv->SetMarkerStyle(20);
 prof_truth_R10_Trimmed_pT_npv->SetMarkerColor(4);
 canvas->Print("Profile Truth-jet R10 Trimmed pT vs. NPV.pdf");
 canvas->Clear();
+
+}
