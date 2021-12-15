@@ -485,72 +485,84 @@ canvas->Clear();
 // Profile Reco-Jet R4 pT vs Mu-Average
 prof_reco_R4_pT_mu->SetMarkerStyle(20);
 prof_reco_R4_pT_mu->SetMarkerColor(4);
+prof_reco_R4_pT_mu->Draw();
 canvas->Print("Profile Reco-jet R4 pT vs. Mu Average.pdf");
 canvas->Clear();
 
 // Profile Reco-Jet R4 pT vs NPV
 prof_reco_R4_pT_npv->SetMarkerStyle(20);
 prof_reco_R4_pT_npv->SetMarkerColor(4);
+prof_reco_R4_pT_npv->Draw();
 canvas->Print("Profile Reco-jet R4 pT vs. NPV.pdf");
 canvas->Clear();
 
 // Profile Reco-Jet R10 pT vs Mu-Average
 prof_reco_R10_pT_mu->SetMarkerStyle(20);
 prof_reco_R10_pT_mu->SetMarkerColor(4);
+prof_reco_R10_pT_mu->Draw();
 canvas->Print("Profile Reco-jet R10 pT vs. Mu Average.pdf");
 canvas->Clear();
 
 // Profile Reco-Jet R10 pT vs NPV
 prof_reco_R10_pT_npv->SetMarkerStyle(20);
 prof_reco_R10_pT_npv->SetMarkerColor(4);
+prof_reco_R10_pT_npv->Draw();
 canvas->Print("Profile Reco-jet R10 pT vs. NPV.pdf");
 canvas->Clear();
 
 // Profile Reco-Jet R10 Trimmed pT vs Mu-Average
 prof_reco_R10_Trimmed_pT_mu->SetMarkerStyle(20);
 prof_reco_R10_Trimmed_pT_mu->SetMarkerColor(4);
+prof_reco_R10_Trimmed_pT_mu->Draw();
 canvas->Print("Profile Reco-jet R10 Trimmed pT vs. Mu Average.pdf");
 canvas->Clear();
 
 // Profile Reco-Jet R10 Trimmed pT vs NPV
 prof_reco_R10_Trimmed_pT_npv->SetMarkerStyle(20);
 prof_reco_R10_Trimmed_pT_npv->SetMarkerColor(4);
+prof_reco_R10_Trimmed_pT_npv->Draw();
 canvas->Print("Profile Reco-jet R10 Trimmed pT vs. NPV.pdf");
 canvas->Clear();
 
 // Profile Truth-Jet R4 pT vs Mu-Average
 prof_truth_R4_pT_mu->SetMarkerStyle(20);
 prof_truth_R4_pT_mu->SetMarkerColor(4);
+prof_truth_R4_pT_mu->Draw();
 canvas->Print("Profile Truth-jet R4 pT vs. Mu Average.pdf");
 canvas->Clear();
 
 // Profile Truth-Jet R4 pT vs NPV
 prof_truth_R4_pT_npv->SetMarkerStyle(20);
 prof_truth_R4_pT_npv->SetMarkerColor(4);
+prof_truth_R4_pT_npv->Draw();
 canvas->Print("Profile Truth-jet R4 pT vs. NPV.pdf");
 canvas->Clear();
 
 // Profile Truth-Jet R10 pT vs Mu-Average
 prof_truth_R10_pT_mu->SetMarkerStyle(20);
 prof_truth_R10_pT_mu->SetMarkerColor(4);
+prof_truth_R10_pT_mu->Draw();
 canvas->Print("Profile Truth-jet R10 pT vs. Mu Average.pdf");
 canvas->Clear();
 
 // Profile Truth-Jet R10 pT vs NPV
 prof_truth_R10_pT_npv->SetMarkerStyle(20);
 prof_truth_R10_pT_npv->SetMarkerColor(4);
+prof_truth_R10_pT_npv->Draw();
 canvas->Print("Profile Truth-jet R10 pT vs. NPV.pdf");
 canvas->Clear();
 
 // Profile Truth-Jet R10 Trimmed pT vs Mu-Average
 prof_truth_R10_Trimmed_pT_mu->SetMarkerStyle(20);
 prof_truth_R10_Trimmed_pT_mu->SetMarkerColor(4);
+prof_truth_R10_Trimmed_pT_mu->Draw();
 canvas->Print("Profile Truth-jet R10 Trimmed pT vs. Mu Average.pdf");
 canvas->Clear();
 
 // Profile Truth-Jet R10 Trimmed pT vs NPV
 prof_truth_R10_Trimmed_pT_npv->SetMarkerStyle(20);
 prof_truth_R10_Trimmed_pT_npv->SetMarkerColor(4);
+prof_truth_R10_Trimmed_pT_npv->Draw();
 canvas->Print("Profile Truth-jet R10 Trimmed pT vs. NPV.pdf");
 canvas->Clear();
 
