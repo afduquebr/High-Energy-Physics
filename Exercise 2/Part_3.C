@@ -82,7 +82,7 @@ TH2F *hist_reco_R10_pT_mu = new TH2F(
       50,
       80,
       500
-  )
+  );
 
 // Reco-Jet R10 pT vs NPV
 
@@ -95,7 +95,7 @@ TH2F *hist_reco_R10_pT_npv = new TH2F(
       50,
       80,
       500
-  )
+  );
 
 // Reco-Jet R10 Trimmed pT vs Mu-Average
 TH2F *hist_reco_R10_Trimmed_pT_mu = new TH2F(
@@ -107,7 +107,7 @@ TH2F *hist_reco_R10_Trimmed_pT_mu = new TH2F(
       50,
       10,
       500
-  )
+  );
 
 // Reco-Jet R10 Trimmed pT vs NPV
 
@@ -120,7 +120,7 @@ TH2F *hist_reco_R10_Trimmed_pT_npv = new TH2F(
       50,
       10,
       500
-  )
+  );
 
 // Truth-Jet R4 pT vs Mu-Average
 TH2F *hist_truth_R4_pT_mu = new TH2F(
@@ -132,7 +132,7 @@ TH2F *hist_truth_R4_pT_mu = new TH2F(
       50,
       10,
       200
-  )
+  );
 
 // Truth-Jet R4 pT vs NPV
 
@@ -145,7 +145,7 @@ TH2F *hist_truth_R4_pT_npv = new TH2F(
       50,
       10,
       200
-  )
+  );
 
 // Truth-Jet R10 pT vs Mu-Average
 TH2F *hist_truth_R10_pT_mu = new TH2F(
@@ -157,7 +157,7 @@ TH2F *hist_truth_R10_pT_mu = new TH2F(
       50,
       80,
       500
-  )
+  );
 
 // Truth-Jet R10 pT vs NPV
 
@@ -170,7 +170,7 @@ TH2F *hist_truth_R10_pT_npv = new TH2F(
       50,
       80,
       500
-  )
+  );
 
 // Truth-Jet R10 Trimmed pT vs Mu-Average
 
@@ -183,7 +183,7 @@ TH2F *hist_truth_R10_Trimmed_pT_mu = new TH2F(
       50,
       10,
       500
-  )
+  );
 
 // Truth-Jet R10 Trimmed pT vs NPV
 
@@ -196,7 +196,7 @@ TH2F *hist_truth_R10_Trimmed_pT_npv = new TH2F(
       50,
       10,
       500
-  )
+  );
 
 // Track-Jet R4 pT vs Mu-Average
 TH2F *hist_track_R4_pT_mu = new TH2F(
@@ -208,7 +208,7 @@ TH2F *hist_track_R4_pT_mu = new TH2F(
       50,
       10,
       200
-  )
+  );
 
 // Track-Jet R4 pT vs NPV
 
@@ -221,7 +221,7 @@ TH2F *hist_track_R4_pT_npv = new TH2F(
       50,
       10,
       200
-  )
+  );
 
 // Set Profiles
 
@@ -232,7 +232,7 @@ TProfile *prof_reco_R4_pT_mu = new TProfile(
       50,
       1,
       90
-  )
+  );
 
 // Profile Reco-Jet R4 pT vs NPV
 TProfile *prof_reco_R4_pT_npv = new TProfile(
@@ -241,7 +241,7 @@ TProfile *prof_reco_R4_pT_npv = new TProfile(
      50,
      1,
      50
-  )
+  );
 
 // Profile Reco-Jet R10 pT vs Mu-Average
 TProfile *prof_reco_R10_pT_mu = new TProfile(
@@ -250,7 +250,7 @@ TProfile *prof_reco_R10_pT_mu = new TProfile(
       50,
       1,
       90
-  )
+  );
 
 // Profile Reco-Jet R10 pT vs NPV
 TProfile *prof_reco_R10_pT_npv = new TProfile(
@@ -259,7 +259,7 @@ TProfile *prof_reco_R10_pT_npv = new TProfile(
       50,
       1,
       50
-  )
+  );
 
 // Profile Reco-Jet R10 Trimmed pT vs Mu-Average
 TProfile *prof_reco_R10_Trimmed_pT_mu = new TProfile(
@@ -268,7 +268,7 @@ TProfile *prof_reco_R10_Trimmed_pT_mu = new TProfile(
       50,
       1,
       90
-  )
+  );
 
 // Profile Reco-Jet R10 Trimmed pT vs NPV
 TProfile *prof_reco_R10_Trimmed_pT_npv = new TProfile(
@@ -277,7 +277,7 @@ TProfile *prof_reco_R10_Trimmed_pT_npv = new TProfile(
       50,
       1,
       50
-  )
+  );
 
 // Profile Truth-Jet R4 pT vs Mu-Average
 TProfile *prof_truth_R4_pT_mu = new TProfile(
@@ -286,7 +286,7 @@ TProfile *prof_truth_R4_pT_mu = new TProfile(
       50,
       1,
       90
-  )
+  );
 
 // Profile Truth-Jet R4 pT vs NPV
 TProfile *prof_truth_R4_pT_npv = new TProfile(
@@ -295,7 +295,7 @@ TProfile *prof_truth_R4_pT_npv = new TProfile(
       50,
       1,
       50
-  )
+  );
 
 // Profile Truth-Jet R10 pT vs Mu-Average
 TProfile *prof_truth_R10_pT_mu = new TProfile(
@@ -304,7 +304,7 @@ TProfile *prof_truth_R10_pT_mu = new TProfile(
       50,
       1,
       90
-  )
+  );
 
 // Profile Truth-Jet R10 pT vs NPV
 TProfile *prof_truth_R10_pT_npv = new TProfile(
@@ -313,7 +313,7 @@ TProfile *prof_truth_R10_pT_npv = new TProfile(
       50,
       1,
       50
-  )
+  );
 
 // Profile Truth-Jet R10 Trimmed pT vs Mu-Average
 TProfile *prof_truth_R10_Trimmed_pT_mu = new TProfile(
@@ -322,7 +322,7 @@ TProfile *prof_truth_R10_Trimmed_pT_mu = new TProfile(
       50,
       1,
       90
-  )
+  );
 
 // Profile Truth-Jet R10 Trimmed pT vs NPV
 TProfile *prof_truth_R10_Trimmed_pT_npv = new TProfile(
@@ -331,7 +331,7 @@ TProfile *prof_truth_R10_Trimmed_pT_npv = new TProfile(
       50,
       1,
       50
-  )
+  );
 
 
 
@@ -398,133 +398,133 @@ TProfile *prof_truth_R10_Trimmed_pT_npv = new TProfile(
 // Save Histograms
 
 // Reco-Jet R4 pT vs Mu-Average
-hist_reco_R4_pT_mu->Draw("COLZ")
-canvas->Print("Reco-Jet R4 pT vs Mu-Average.pdf")
-canvas->Clear()
+hist_reco_R4_pT_mu->Draw("COLZ");
+canvas->Print("Reco-Jet R4 pT vs Mu-Average.pdf");
+canvas->Clear();
 
 // Reco-Jet R4 pT vs NPV
-hist_reco_R4_pT_npv->Draw("COLZ")
-canvas->Print("Reco-Jet R4 pT vs NPV.pdf")
-canvas->Clear()
+hist_reco_R4_pT_npv->Draw("COLZ");
+canvas->Print("Reco-Jet R4 pT vs NPV.pdf");
+canvas->Clear();
 
 // Reco-Jet R10 pT vs Mu-Average
-hist_reco_R10_pT_mu->Draw("COLZ")
-canvas->Print("Reco-Jet R10 pT vs Mu-Average.pdf")
-canvas->Clear()
+hist_reco_R10_pT_mu->Draw("COLZ");
+canvas->Print("Reco-Jet R10 pT vs Mu-Average.pdf");
+canvas->Clear();
 
 // Reco-Jet R10 pT vs NPV
-hist_reco_R10_pT_npv->Draw("COLZ")
-canvas->Print("Reco-Jet R10 pT vs NPV.pdf")
-canvas->Clear()
+hist_reco_R10_pT_npv->Draw("COLZ");
+canvas->Print("Reco-Jet R10 pT vs NPV.pdf");
+canvas->Clear();
 
 // Reco-Jet R10 Trimmed pT vs Mu-Average
-hist_reco_R10_Trimmed_pT_mu->Draw("COLZ")
-canvas->Print("Reco-Jet R10 Trimmed pT vs Mu-Average.pdf")
-canvas->Clear()
+hist_reco_R10_Trimmed_pT_mu->Draw("COLZ");
+canvas->Print("Reco-Jet R10 Trimmed pT vs Mu-Average.pdf");
+canvas->Clear();
 
 // Reco-Jet R10 Trimmed pT vs NPV
-hist_reco_R10_Trimmed_pT_npv->Draw("COLZ")
-canvas->Print("Reco-Jet R10 Trimmed pT vs NPV.pdf")
-canvas->Clear()
+hist_reco_R10_Trimmed_pT_npv->Draw("COLZ");
+canvas->Print("Reco-Jet R10 Trimmed pT vs NPV.pdf");
+canvas->Clear();
 
 // Truth-Jet R4 pT vs Mu-Average
-hist_truth_R4_pT_mu->Draw("COLZ")
-canvas->Print("Truth-Jet R4 pT vs Mu-Average.pdf")
-canvas->Clear()
+hist_truth_R4_pT_mu->Draw("COLZ");
+canvas->Print("Truth-Jet R4 pT vs Mu-Average.pdf");
+canvas->Clear();
 
 // Truth-Jet R4 pT vs NPV
-hist_truth_R4_pT_npv->Draw("COLZ")
-canvas->Print("Truth-Jet R4 pT vs NPV.pdf")
-canvas->Clear()
+hist_truth_R4_pT_npv->Draw("COLZ");
+canvas->Print("Truth-Jet R4 pT vs NPV.pdf");
+canvas->Clear();
 
 // Truth-Jet R10 pT vs Mu-Average
-hist_truth_R10_pT_mu->Draw("COLZ")
-canvas->Print("Truth-Jet R10 pT vs Mu-Average.pdf")
-canvas->Clear()
+hist_truth_R10_pT_mu->Draw("COLZ");
+canvas->Print("Truth-Jet R10 pT vs Mu-Average.pdf");
+canvas->Clear();
 
 // Truth-Jet R10 pT vs NPV
-hist_truth_R10_pT_npv->Draw("COLZ")
-canvas->Print("Truth-Jet R10 pT vs NPV.pdf")
-canvas->Clear()
+hist_truth_R10_pT_npv->Draw("COLZ");
+canvas->Print("Truth-Jet R10 pT vs NPV.pdf");
+canvas->Clear();
 
 // Truth-Jet R10 Trimmed pT vs Mu-Average
-hist_truth_R10_Trimmed_pT_mu->Draw("COLZ")
-canvas->Print("Truth-Jet R10 Trimmed pT vs Mu-Average.pdf")
-canvas->Clear()
+hist_truth_R10_Trimmed_pT_mu->Draw("COLZ");
+canvas->Print("Truth-Jet R10 Trimmed pT vs Mu-Average.pdf");
+canvas->Clear();
 
 // Truth-Jet R10 Trimmed pT vs NPV
-hist_truth_R10_Trimmed_pT_npv->Draw("COLZ")
-canvas->Print("Truth-Jet R10 Trimmed pT vs NPV.pdf")
-canvas->Clear()
+hist_truth_R10_Trimmed_pT_npv->Draw("COLZ");
+canvas->Print("Truth-Jet R10 Trimmed pT vs NPV.pdf");
+canvas->Clear();
 
 // Profile Reco-Jet R4 pT vs Mu-Average
-prof_reco_R4_pT_mu->SetMarkerStyle(20)
-prof_reco_R4_pT_mu->SetMarkerColor(4)
-canvas->Print("Profile Reco-jet R4 pT vs. Mu Average.pdf")
-canvas->Clear()
+prof_reco_R4_pT_mu->SetMarkerStyle(20);
+prof_reco_R4_pT_mu->SetMarkerColor(4);
+canvas->Print("Profile Reco-jet R4 pT vs. Mu Average.pdf");
+canvas->Clear();
 
 // Profile Reco-Jet R4 pT vs NPV
-prof_reco_R4_pT_npv->SetMarkerStyle(20)
-prof_reco_R4_pT_npv->SetMarkerColor(4)
-canvas->Print("Profile Reco-jet R4 pT vs. NPV.pdf")
-canvas->Clear()
+prof_reco_R4_pT_npv->SetMarkerStyle(20);
+prof_reco_R4_pT_npv->SetMarkerColor(4);
+canvas->Print("Profile Reco-jet R4 pT vs. NPV.pdf");
+canvas->Clear();
 
 // Profile Reco-Jet R10 pT vs Mu-Average
-prof_reco_R10_pT_mu->SetMarkerStyle(20)
-prof_reco_R10_pT_mu->SetMarkerColor(4)
-canvas->Print("Profile Reco-jet R10 pT vs. Mu Average.pdf")
-canvas->Clear()
+prof_reco_R10_pT_mu->SetMarkerStyle(20);
+prof_reco_R10_pT_mu->SetMarkerColor(4);
+canvas->Print("Profile Reco-jet R10 pT vs. Mu Average.pdf");
+canvas->Clear();
 
 // Profile Reco-Jet R10 pT vs NPV
-prof_reco_R10_pT_npv->SetMarkerStyle(20)
-prof_reco_R10_pT_npv->SetMarkerColor(4)
-canvas->Print("Profile Reco-jet R10 pT vs. NPV.pdf")
-canvas->Clear()
+prof_reco_R10_pT_npv->SetMarkerStyle(20);
+prof_reco_R10_pT_npv->SetMarkerColor(4);
+canvas->Print("Profile Reco-jet R10 pT vs. NPV.pdf");
+canvas->Clear();
 
 // Profile Reco-Jet R10 Trimmed pT vs Mu-Average
-prof_reco_R10_Trimmed_pT_mu->SetMarkerStyle(20)
-prof_reco_R10_Trimmed_pT_mu->SetMarkerColor(4)
-canvas->Print("Profile Reco-jet R10 Trimmed pT vs. Mu Average.pdf")
-canvas->Clear()
+prof_reco_R10_Trimmed_pT_mu->SetMarkerStyle(20);
+prof_reco_R10_Trimmed_pT_mu->SetMarkerColor(4);
+canvas->Print("Profile Reco-jet R10 Trimmed pT vs. Mu Average.pdf");
+canvas->Clear();
 
 // Profile Reco-Jet R10 Trimmed pT vs NPV
-prof_reco_R10_Trimmed_pT_npv->SetMarkerStyle(20)
-prof_reco_R10_Trimmed_pT_npv->SetMarkerColor(4)
-canvas->Print("Profile Reco-jet R10 Trimmed pT vs. NPV.pdf")
-canvas->Clear()
+prof_reco_R10_Trimmed_pT_npv->SetMarkerStyle(20);
+prof_reco_R10_Trimmed_pT_npv->SetMarkerColor(4);
+canvas->Print("Profile Reco-jet R10 Trimmed pT vs. NPV.pdf");
+canvas->Clear();
 
 // Profile Truth-Jet R4 pT vs Mu-Average
-prof_truth_R4_pT_mu->SetMarkerStyle(20)
-prof_truth_R4_pT_mu->SetMarkerColor(4)
-canvas->Print("Profile Truth-jet R4 pT vs. Mu Average.pdf")
-canvas->Clear()
+prof_truth_R4_pT_mu->SetMarkerStyle(20);
+prof_truth_R4_pT_mu->SetMarkerColor(4);
+canvas->Print("Profile Truth-jet R4 pT vs. Mu Average.pdf");
+canvas->Clear();
 
 // Profile Truth-Jet R4 pT vs NPV
-prof_truth_R4_pT_npv->SetMarkerStyle(20)
-prof_truth_R4_pT_npv->SetMarkerColor(4)
-canvas->Print("Profile Truth-jet R4 pT vs. NPV.pdf")
-canvas->Clear()
+prof_truth_R4_pT_npv->SetMarkerStyle(20);
+prof_truth_R4_pT_npv->SetMarkerColor(4);
+canvas->Print("Profile Truth-jet R4 pT vs. NPV.pdf");
+canvas->Clear();
 
 // Profile Truth-Jet R10 pT vs Mu-Average
-prof_truth_R10_pT_mu->SetMarkerStyle(20)
-prof_truth_R10_pT_mu->SetMarkerColor(4)
-canvas->Print("Profile Truth-jet R10 pT vs. Mu Average.pdf")
-canvas->Clear()
+prof_truth_R10_pT_mu->SetMarkerStyle(20);
+prof_truth_R10_pT_mu->SetMarkerColor(4);
+canvas->Print("Profile Truth-jet R10 pT vs. Mu Average.pdf");
+canvas->Clear();
 
 // Profile Truth-Jet R10 pT vs NPV
-prof_truth_R10_pT_npv->SetMarkerStyle(20)
-prof_truth_R10_pT_npv->SetMarkerColor(4)
-canvas->Print("Profile Truth-jet R10 pT vs. NPV.pdf")
-canvas->Clear()
+prof_truth_R10_pT_npv->SetMarkerStyle(20);
+prof_truth_R10_pT_npv->SetMarkerColor(4);
+canvas->Print("Profile Truth-jet R10 pT vs. NPV.pdf");
+canvas->Clear();
 
 // Profile Truth-Jet R10 Trimmed pT vs Mu-Average
-prof_truth_R10_Trimmed_pT_mu->SetMarkerStyle(20)
-prof_truth_R10_Trimmed_pT_mu->SetMarkerColor(4)
-canvas->Print("Profile Truth-jet R10 Trimmed pT vs. Mu Average.pdf")
-canvas->Clear()
+prof_truth_R10_Trimmed_pT_mu->SetMarkerStyle(20);
+prof_truth_R10_Trimmed_pT_mu->SetMarkerColor(4);
+canvas->Print("Profile Truth-jet R10 Trimmed pT vs. Mu Average.pdf");
+canvas->Clear();
 
 // Profile Truth-Jet R10 Trimmed pT vs NPV
-prof_truth_R10_Trimmed_pT_npv->SetMarkerStyle(20)
-prof_truth_R10_Trimmed_pT_npv->SetMarkerColor(4)
-canvas->Print("Profile Truth-jet R10 Trimmed pT vs. NPV.pdf")
-canvas->Clear()
+prof_truth_R10_Trimmed_pT_npv->SetMarkerStyle(20);
+prof_truth_R10_Trimmed_pT_npv->SetMarkerColor(4);
+canvas->Print("Profile Truth-jet R10 Trimmed pT vs. NPV.pdf");
+canvas->Clear();
