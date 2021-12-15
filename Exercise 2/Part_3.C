@@ -341,55 +341,55 @@ TProfile *prof_truth_R10_Trimmed_pT_npv = new TProfile(
 
     if(recojet_R4_pT->size()!=0 && recojet_R4_pT->at(0)>20000.){
       for(int j=0; j<recojet_R4_pT->size(); j++){
-        hist_reco_R4_pT_mu->Fill(recojet_R4_pT->at(j)/1000.,npv,evtw);
-        hist_reco_R4_pT_npv->Fill(recojet_R4_pT->at(j)/1000.,npv,evtw);
-        prof_reco_R4_pT_mu->Fill(recojet_R4_pT->at(j)/1000.,mu_avg,evtw);
-        prof_reco_R4_pT_npv->Fill(recojet_R4_pT->at(j)/1000.,mu_avg,evtw);
+        hist_reco_R4_pT_mu->Fill(mu_avg,recojet_R4_pT->at(j)/1000.,evtw);
+        hist_reco_R4_pT_npv->Fill(npv,recojet_R4_pT->at(j)/1000.,evtw);
+        prof_reco_R4_pT_mu->Fill(mu_avg,recojet_R4_pT->at(j)/1000.,evtw);
+        prof_reco_R4_pT_npv->Fill(npv,recojet_R4_pT->at(j)/1000.,evtw);
       }
     }
 
     if(recojet_R10_pT->size()!=0 && recojet_R10_pT->at(0)>20000.){
       for(int j=0; j<recojet_R10_pT->size(); j++){
-        hist_reco_R10_pT_mu->Fill(recojet_R10_pT->at(j)/1000.,npv,evtw);
-        hist_reco_R10_pT_npv->Fill(recojet_R10_pT->at(j)/1000.,npv,evtw);
-        prof_reco_R10_pT_mu->Fill(recojet_R10_pT->at(j)/1000.,mu_avg,evtw);
-        prof_reco_R10_pT_npv->Fill(recojet_R10_pT->at(j)/1000.,mu_avg,evtw);
+        hist_reco_R10_pT_mu->Fill(mu_avg,recojet_R10_pT->at(j)/1000.,evtw);
+        hist_reco_R10_pT_npv->Fill(npv,recojet_R10_pT->at(j)/1000.,evtw);
+        prof_reco_R10_pT_mu->Fill(mu_avg,recojet_R10_pT->at(j)/1000.,evtw);
+        prof_reco_R10_pT_npv->Fill(npv,recojet_R10_pT->at(j)/1000.,evtw);
       }
     }
 
     if(recojet_R10_Trimmed_pT->size()!=0 && recojet_R10_Trimmed_pT->at(0)>20000.){
       for(int j=0; j<recojet_R10_Trimmed_pT->size(); j++){
-        hist_reco_R10_Trimmed_pT_mu->Fill(recojet_R10_Trimmed_pT->at(j)/1000.,npv,evtw);
-        hist_reco_R10_Trimmed_pT_npv->Fill(recojet_R10_Trimmed_pT->at(j)/1000.,npv,evtw);
-        prof_reco_R10_Trimmed_pT_mu->Fill(recojet_R10_Trimmed_pT->at(j)/1000.,mu_avg,evtw);
-        prof_reco_R10_Trimmed_pT_npv->Fill(recojet_R10_Trimmed_pT->at(j)/1000.,mu_avg,evtw);
+        hist_reco_R10_Trimmed_pT_mu->Fill(mu_avg,recojet_R10_Trimmed_pT->at(j)/1000.,evtw);
+        hist_reco_R10_Trimmed_pT_npv->Fill(npv,recojet_R10_Trimmed_pT->at(j)/1000.,evtw);
+        prof_reco_R10_Trimmed_pT_mu->Fill(mu_avg,recojet_R10_Trimmed_pT->at(j)/1000.,evtw);
+        prof_reco_R10_Trimmed_pT_npv->Fill(npv,recojet_R10_Trimmed_pT->at(j)/1000.,evtw);
       }
     }
 
     if(truthjet_R4_pT->size()!=0 && truthjet_R4_pT->at(0)>20000.){
       for(int j=0; j<truthjet_R4_pT->size(); j++){
-        hist_truth_R4_pT_mu->Fill(truthjet_R4_pT->at(j)/1000.,npv,evtw);
-        hist_truth_R4_pT_npv->Fill(truthjet_R4_pT->at(j)/1000.,npv,evtw);
-        prof_truth_R4_pT_mu->Fill(truthjet_R4_pT->at(j)/1000.,mu_avg,evtw);
-        prof_truth_R4_pT_npv->Fill(truthjet_R4_pT->at(j)/1000.,mu_avg,evtw);
+        hist_truth_R4_pT_mu->Fill(mu_avg,truthjet_R4_pT->at(j)/1000.,evtw);
+        hist_truth_R4_pT_npv->Fill(npv,truthjet_R4_pT->at(j)/1000.,evtw);
+        prof_truth_R4_pT_mu->Fill(mu_avg,truthjet_R4_pT->at(j)/1000.,evtw);
+        prof_truth_R4_pT_npv->Fill(npv,truthjet_R4_pT->at(j)/1000.,evtw);
       }
     }
 
     if(truthjet_R10_pT->size()!=0 && truthjet_R10_pT->at(0)>20000.){
       for(int j=0; j<truthjet_R10_pT->size(); j++){
-        hist_truth_R10_pT_mu->Fill(truthjet_R10_pT->at(j)/1000.,npv,evtw);
-        hist_truth_R10_pT_npv->Fill(truthjet_R10_pT->at(j)/1000.,npv,evtw);
-        prof_truth_R10_pT_mu->Fill(truthjet_R10_pT->at(j)/1000.,mu_avg,evtw);
-        prof_truth_R10_pT_npv->Fill(truthjet_R10_pT->at(j)/1000.,mu_avg,evtw);
+        hist_truth_R10_pT_mu->Fill(mu_avg,truthjet_R10_pT->at(j)/1000.,evtw);
+        hist_truth_R10_pT_npv->Fill(npv,truthjet_R10_pT->at(j)/1000.,evtw);
+        prof_truth_R10_pT_mu->Fill(mu_avg,truthjet_R10_pT->at(j)/1000.,evtw);
+        prof_truth_R10_pT_npv->Fill(npv,truthjet_R10_pT->at(j)/1000.,evtw);
       }
     }
 
     if(truthjet_R10_Trimmed_pT->size()!=0 && truthjet_R10_Trimmed_pT->at(0)>20000.){
       for(int j=0; j<truthjet_R10_Trimmed_pT->size(); j++){
-        hist_truth_R10_Trimmed_pT_mu->Fill(truthjet_R10_Trimmed_pT->at(j)/1000.,npv,evtw);
-        hist_truth_R10_Trimmed_pT_npv->Fill(truthjet_R10_Trimmed_pT->at(j)/1000.,npv,evtw);
-        prof_truth_R10_Trimmed_pT_mu->Fill(truthjet_R10_Trimmed_pT->at(j)/1000.,mu_avg,evtw);
-        prof_truth_R10_Trimmed_pT_npv->Fill(truthjet_R10_Trimmed_pT->at(j)/1000.,mu_avg,evtw);
+        hist_truth_R10_Trimmed_pT_mu->Fill(mu_avg,truthjet_R10_Trimmed_pT->at(j)/1000.,evtw);
+        hist_truth_R10_Trimmed_pT_npv->Fill(npv,truthjet_R10_Trimmed_pT->at(j)/1000.,evtw);
+        prof_truth_R10_Trimmed_pT_mu->Fill(mu_avg,truthjet_R10_Trimmed_pT->at(j)/1000.,evtw);
+        prof_truth_R10_Trimmed_pT_npv->Fill(npv,truthjet_R10_Trimmed_pT->at(j)/1000.,evtw);
       }
     }
   }
