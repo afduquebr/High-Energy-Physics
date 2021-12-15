@@ -227,110 +227,134 @@ TH2F *hist_track_R4_pT_npv = new TH2F(
 
 // Profile Reco-Jet R4 pT vs Mu-Average
 TProfile *prof_reco_R4_pT_mu = new TProfile(
-      "Profile Reco-jet vs. Mu Average",
+      "Profile Reco-jet R4 vs. Mu Average",
       "Profile Reco-jet vs. Mu Average; Mu Average; jet pT",
       50,
       1,
-      90
+      90,
+      0,
+      200
   );
 
 // Profile Reco-Jet R4 pT vs NPV
 TProfile *prof_reco_R4_pT_npv = new TProfile(
-      "Profile Reco-jet vs. NPV",
+      "Profile Reco-jet R4 vs. NPV",
       "Profile Reco-jet vs. NPV; NPV; jet pT",
      50,
      1,
-     50
+     50,
+     0,
+     200
   );
 
 // Profile Reco-Jet R10 pT vs Mu-Average
 TProfile *prof_reco_R10_pT_mu = new TProfile(
-      "Profile Reco-jet vs. Mu Average",
+      "Profile Reco-jet R10 vs. Mu Average",
       "Profile Reco-jet vs. Mu Average; Mu Average; jet pT",
       50,
       1,
-      90
+      90,
+      0,
+      200
   );
 
 // Profile Reco-Jet R10 pT vs NPV
 TProfile *prof_reco_R10_pT_npv = new TProfile(
-      "Profile Reco-jet vs. NPV",
+      "Profile Reco-jet R10 vs. NPV",
       "Profile Reco-jet vs. NPV; NPV; jet pT",
       50,
       1,
-      50
+      50,
+      0,
+      200
   );
 
 // Profile Reco-Jet R10 Trimmed pT vs Mu-Average
 TProfile *prof_reco_R10_Trimmed_pT_mu = new TProfile(
-      "Profile Reco-jet vs. Mu Average",
+      "Profile Reco-jet R10 Trimmed vs. Mu Average",
       "Profile Reco-jet vs. Mu Average; Mu Average; jet pT",
       50,
       1,
-      90
+      90,
+      0,
+      200
   );
 
 // Profile Reco-Jet R10 Trimmed pT vs NPV
 TProfile *prof_reco_R10_Trimmed_pT_npv = new TProfile(
-      "Profile Reco-jet vs. NPV",
+      "Profile Reco-jet R10 Trimmed vs. NPV",
       "Profile Reco-jet vs. NPV; NPV; jet pT",
       50,
       1,
-      50
+      50,
+      0,
+      200
   );
 
 // Profile Truth-Jet R4 pT vs Mu-Average
 TProfile *prof_truth_R4_pT_mu = new TProfile(
-      "Profile Truth-jet vs. Mu Average",
+      "Profile Truth-jet R4 vs. Mu Average",
       "Profile Truth-jet vs. Mu Average; Mu Average; jet pT",
       50,
       1,
-      90
+      90,
+      0,
+      200
   );
 
 // Profile Truth-Jet R4 pT vs NPV
 TProfile *prof_truth_R4_pT_npv = new TProfile(
-      "Profile Truth-jet vs. NPV",
+      "Profile Truth-jet R4 vs. NPV",
       "Profile Truth-jet vs. NPV; NPV; jet pT",
       50,
       1,
-      50
+      50,
+      0,
+      200
   );
 
 // Profile Truth-Jet R10 pT vs Mu-Average
 TProfile *prof_truth_R10_pT_mu = new TProfile(
-      "Profile Truth-jet vs. Mu Average",
+      "Profile Truth-jet R10 vs. Mu Average",
       "Profile Truth-jet vs. Mu Average; Mu Average; jet pT",
       50,
       1,
-      90
+      90,
+      0,
+      200
   );
 
 // Profile Truth-Jet R10 pT vs NPV
 TProfile *prof_truth_R10_pT_npv = new TProfile(
-      "Profile Truth-jet vs. NPV",
+      "Profile Truth-jet R10 vs. NPV",
       "Profile Truth-jet vs. NPV; NPV; jet pT",
       50,
       1,
-      50
+      50,
+      0,
+      200
   );
 
 // Profile Truth-Jet R10 Trimmed pT vs Mu-Average
 TProfile *prof_truth_R10_Trimmed_pT_mu = new TProfile(
-      "Profile Truth-jet vs. Mu Average",
+      "Profile Truth-jet R10 Trimmed vs. Mu Average",
       "Profile Truth-jet vs. Mu Average; Mu Average; jet pT",
       50,
       1,
-      90
+      90,
+      0,
+      200
   );
 
 // Profile Truth-Jet R10 Trimmed pT vs NPV
 TProfile *prof_truth_R10_Trimmed_pT_npv = new TProfile(
-      "Profile Truth-jet vs. NPV",
+      "Profile Truth-jet R10 Trimmed vs. NPV",
       "Profile Truth-jet vs. NPV; NPV; jet pT",
       50,
       1,
-      50
+      50,
+      0,
+      200
   );
 
   int nentries, nbytes, i;
