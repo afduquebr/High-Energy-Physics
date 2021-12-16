@@ -109,4 +109,5 @@ void Part_8 () {
   hist_truth_R10_Trimmed_mass->SetMarkerColor(kBlue);
   hist_truth_R10_Trimmed_mass->Draw("Same");
   canvas->Print("Truth-Jet R10 and R10 Trimmed Mass.pdf");
+  canvas->Clear();
 }
