@@ -164,6 +164,8 @@ TH1F *hist_matched_reco_truth_pT_20 = new TH1F(
 
   std::cout << "¡Listo!" << std::endl;
 
+  canvas->SetLogy(1);
+
   hist_matched_reco_truth_pT_20->SetMarkerStyle(21);
   hist_matched_reco_truth_pT_20->SetMarkerColor(kRed);
   hist_matched_reco_truth_pT_20->Draw("");
