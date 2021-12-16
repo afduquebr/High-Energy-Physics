@@ -91,6 +91,8 @@ void Part_8 () {
 
   std::cout << "¡Listo!" << std::endl;
 
+  canvas->SetLogy(1);
+
   hist_reco_R10_mass->SetMarkerStyle(21);
   hist_reco_R10_mass->SetMarkerColor(kRed);
   hist_reco_R10_mass->Draw("");
