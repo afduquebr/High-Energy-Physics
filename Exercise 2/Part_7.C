@@ -181,11 +181,9 @@ TH1F *hist_matched_reco_truth_pT_20 = new TH1F(
   hist_matched_track_truth_pT_20->SetMarkerStyle(21);
   hist_matched_track_truth_pT_20->SetMarkerColor(kRed);
   hist_matched_track_truth_pT_20->Draw("");
-
   hist_matched_track_truth_pT_100->SetMarkerStyle(22);
   hist_matched_track_truth_pT_100->SetMarkerColor(kBlue);
   hist_matched_track_truth_pT_100->Draw("Same");
-
   hist_matched_track_truth_pT_500->SetMarkerStyle(23);
   hist_matched_track_truth_pT_500->SetMarkerColor(kCyan);
   hist_matched_track_truth_pT_500->Draw("Same");
