@@ -41,7 +41,7 @@ void Part_8 () {
 
   TH1F *hist_reco_R10_mass = new TH1F(
    "Leading Reco-Jet R10 Mass",
-   "Leading Reco-Jet R10 Mass; Mass; Events",
+   "Leading Reco-Jet R10 Mass; Mass (GeV); Events",
    20,
    0,
    2000
@@ -49,7 +49,7 @@ void Part_8 () {
 
  TH1F *hist_reco_R10_Trimmed_mass = new TH1F(
    "Leading Reco-Jet R10 Trimmed Mass",
-   "Leading Reco-Jet R10 Mass; Mass; Events",
+   "Leading Reco-Jet R10 Mass; Mass (GeV); Events",
    20,
    0,
    2000
@@ -57,7 +57,7 @@ void Part_8 () {
 
  TH1F *hist_truth_R10_mass = new TH1F(
    "Leading Truth-Jet R10 Mass",
-   "Leading Truth-Jet R10 Mass; Mass; Events",
+   "Leading Truth-Jet R10 Mass; Mass (GeV); Events",
    20,
    0,
    2000
@@ -65,7 +65,7 @@ void Part_8 () {
 
  TH1F *hist_truth_R10_Trimmed_mass = new TH1F(
    "Leading Truth-Jet R10 Trimmed Mass",
-   "Leading Truth-Jet R10 Mass; Mass; Events",
+   "Leading Truth-Jet R10 Mass; Mass (GeV); Events",
    20,
    0,
    2000
