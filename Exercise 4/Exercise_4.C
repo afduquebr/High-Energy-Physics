@@ -4,6 +4,10 @@
 
 void Exercise_4 () {
 
+
+  //------------ DATA ANALYSIS ----------//
+
+
   TFile *file = TFile::Open(
     "http://csandova.web.cern.ch/csandova/HEP-Ex-Course/Code/TTbarSel/Data_8TeV.root"
   );
@@ -333,11 +337,7 @@ void Exercise_4 () {
 
 
 
-
-
-
-
-
+//------------ MONTE CARLO ANALYSIS ----------//
 
   TFile *file_MC = TFile::Open(
     "http://csandova.web.cern.ch/csandova/HEP-Ex-Course/Code/TTbarSel/ttbar_8TeV.root"
@@ -406,73 +406,128 @@ void Exercise_4 () {
   tree_MC->SetBranchAddress("jet_MV1", &jet_mv1_MC);
 
   // Histograms for Leptons
+
+  // Transverse Momentum
   TH1F *hist_lep_pt_MC = new TH1F(
-    "Leptons pT", "Leptons pT; pT (GeV); Events",
-    50, 0, 1000
+    "Leptons pT",
+    "Leptons pT; pT (GeV); Events",
+    50,
+    0,
+    1000
   );
 
+  // Track Isolation
   TH1F *hist_lep_pt_cone_30_MC = new TH1F(
-    "Track isolation", "Track isolation; lep_ptcone30/lep_pt; Events",
-    50, 0, 0.2
+    "Track Isolation",
+    "Track Isolation; lep_ptcone30/lep_pt; Events",
+    50,
+    0,
+    2
   );
 
+  // Calorimeter Isolation
   TH1F *hist_lep_et_cone_20_MC = new TH1F(
-    "Calorimeter isolation",
-    "Calorimeter isolation; lep_etcone30/lep_pt; Events",
-    50, 0, 0.2
+    "Calorimeter Isolation",
+    "Calorimeter Isolation; lep_etcone30/lep_pt; Events",
+    50,
+    0,
+    2
   );
 
+  // Pseudorapidity (Eta)
   TH1F *hist_lep_eta_MC = new TH1F(
-    "Leptons eta", "Leptons eta; eta; Events",
-    50, -5, 5
+    "Leptons eta",
+    "Leptons eta; eta; Events",
+    50,
+    -4,
+    4
   );
+
 
   // Histograms for Jets
+
+  // Number of jets
   TH1F *hist_njets_MC = new TH1F(
-    "Number of jets", "n-jets; Jet multiplicity; Events",
-    10,0,10
+    "Number of jets",
+    "Number of jets; Number of Jets; Events",
+    15,
+    0,
+    15
   );
 
+  // Transverse Momentum
   TH1F *hist_jet_pt_MC = new TH1F(
-    "Jets pT", "Jets pT; pT (GeV); Events",
-    50, 0, 1000
+    "Jets pT",
+    "Jets pT; pT (GeV); Events",
+    50,
+    0,
+    1000
   );
 
+
+  // Pseudorapidity (Eta)
   TH1F *hist_jet_eta_MC = new TH1F(
-    "Jets eta", "Jets eta; eta; Events",
-    50, -5, 5
+    "Jets eta",
+    "Jets eta; eta; Events",
+    50,
+    -4,
+    4
   );
 
+  // Jet Vertex Fraction
   TH1F *hist_jet_JVF_MC = new TH1F(
-    "Jets JVF", "Jets JVF; JVF; Events",
-    50, 0, 1
+    "Jets JVF",
+    "Jets JVF; JVF; Events",
+    50,
+    -1,
+    1
   );
 
+  // MV1 Output
   TH1F *hist_jet_MV1_MC = new TH1F(
-    "Jets MV1", "Jets MV1; MV1; Events",
-    50, 0.5, 1
+    "Jets MV1",
+    "Jets MV1; MV1; Events",
+    50,
+    0,
+    1
   );
 
-  // Histogram for bJets
+  // Number of b-Jets
   TH1F *hist_nbjets_MC = new TH1F(
-    "Number of b-jets", "n-bjets; b-Jet multiplicity; Events",
-    50, 0, 6
+    "Number of b-jets",
+    "Number of b-jets; Number of b-jets; Events",
+    15,
+    0,
+    15
   );
 
-  // Histogram for MET
+
+  //Missing Transverse Energy
   TH1F *hist_MET_MC = new TH1F(
-    "MET", "MET; MET (GeV); Events",
-    50, 0, 200
+    "MET",
+    "MET; MET (GeV); Events",
+    50,
+    0,
+    250
   );
 
-  // Histogram for mTW
+
+  // Transverse Mass of W Boson
   TH1F *hist_mTW_MC = new TH1F(
     "mTW", "mTW; mTW (GeV); Events",
-    50, 0, 200
+    50,
+    0,
+    250
   );
 
-  // Histogram for cuts
-  TH1F *cutflow_MC = new TH1F("Cutflow","Cutflow; Cut; Events",10,0,10);
+  // Histogram for cutflows
+  TH1F *cutflow_MC = new TH1F(
+    "Cutflow",
+    "Cutflow; Cut; Events",
+    10,
+    0,
+    10
+  );
 
   int nentries_MC, nbytes_MC;
   nentries_MC = (Int_t)tree_MC->GetEntries();
@@ -492,11 +547,11 @@ void Exercise_4 () {
     // Weight scale for MC
     Float_t N_MC_evt = 49761200.21;
     Float_t filter = 0.072212854;
-    Float_t sigma = 137.29749; // pb^-1
+    Float_t sigma = 137.29749;
 
-    Float_t L_MC = N_MC_evt * filter / sigma;
+    Float_t L_MC = N_MC_evt*filter/sigma;
 
-    Float_t Weight_MC = 1000 / L_MC;
+    Float_t Weight_MC = 1000/L_MC;
 
     Float_t sf = scalef_pileup * scalef_e * scalef_mu * scalef_btag;
     sf *= scalef_trigger * scalef_jvfsf * scalef_zvertex;
@@ -520,25 +575,25 @@ void Exercise_4 () {
     int g_lep = 0;
 
     //Loop over leptons
-    for (int j=0; j < lep_n_MC; j++) {
+    for(int j=0; j<lep_n_MC; j++) {
 
-      if( lep_pt_MC[j] < 25000.0) continue;
-      hist_lep_pt_MC->Fill(lep_pt_MC[j] / 1000, evt_wt);
+      if(lep_pt_MC[j]<25000.0) continue;
+      hist_lep_pt_MC->Fill(lep_pt_MC[j]/1000, evt_wt);
 
-      if( lep_ptcone30_MC[j]/lep_pt_MC[j] > 0.15 ) continue;
-      hist_lep_pt_cone_30_MC->Fill(lep_ptcone30_MC[j] / lep_pt_MC[j], evt_wt);
+      if(lep_ptcone30_MC[j]/lep_pt_MC[j]>0.15) continue;
+      hist_lep_pt_cone_30_MC->Fill(lep_ptcone30_MC[j]/lep_pt_MC[j], evt_wt);
 
-      if( lep_etcone20_MC[j]/lep_pt_MC[j] > 0.15 ) continue;
-      hist_lep_et_cone_20_MC->Fill(lep_etcone20_MC[j] / lep_pt_MC[j], evt_wt);
+      if(lep_etcone20_MC[j]/lep_pt_MC[j]>0.15) continue;
+      hist_lep_et_cone_20_MC->Fill(lep_etcone20_MC[j]/lep_pt_MC[j], evt_wt);
 
-      if(lep_type_MC[j] == 13 && TMath::Abs(lep_eta_MC[j]) < 2.5){
+      if(lep_type_MC[j]==13 && TMath::Abs(lep_eta_MC[j])<2.5){
         n_mu++;
         g_lep = j;
         hist_lep_eta_MC->Fill(lep_eta_MC[j], evt_wt);
       }
 
-      if (lep_type_MC[j]==11 && TMath::Abs(lep_eta_MC[j]) < 2.47){
-        if (TMath::Abs(lep_eta_MC[j]) < 1.37 || TMath::Abs(lep_eta_MC[j]) > 1.52) {
+      if(lep_type_MC[j]==11 && TMath::Abs(lep_eta_MC[j])<2.47){
+        if(TMath::Abs(lep_eta_MC[j])<1.37 || TMath::Abs(lep_eta_MC[j])>1.52){
           n_el++;
           g_lep = j;
           hist_lep_eta_MC->Fill(lep_eta_MC[j], evt_wt);
@@ -548,41 +603,43 @@ void Exercise_4 () {
     }
     n_lep = n_el + n_mu;
 
-    //Select events with only 1 good lepton and fill the cutflow_MC histogram
-    if (n_lep != 1) continue;
-    cutflow_MC->Fill(3, evt_wt);
+    //Third cut: Select events with one good lepton
+    if(n_lep!=1) continue;
     cut_3_MC++;
+    cutflow_MC->Fill(3, evt_wt);
 
 
     int n_jets = 0;
     int n_bjets = 0;
 
     //Fourth cut: At least 4 jets
-    if (jet_n_MC < 4) continue;
+    if(jet_n_MC<4) continue;
     cutflow_MC->Fill(4, evt_wt);
     cut_4_MC++;
 
     //Number of jets distribution
     hist_njets_MC->Fill(jet_n_MC, evt_wt);
 
-    for (int j=0; j < jet_n_MC; j++){
-      // To complete: apply jet cuts to find the good jets
-      if (jet_pt_MC[j] < 25000.) continue;
-      hist_jet_pt_MC->Fill(jet_pt_MC[j] / 1000, evt_wt);
+    for(int j=0; j<jet_n_MC; j++){
+
+      // Jet cuts
+      if(jet_pt_MC[j]<25000.) continue;
+      hist_jet_pt_MC->Fill(jet_pt_MC[j]/1000, evt_wt);
 
       //Eta cut
-      if (jet_eta_MC[j] > 2.5) continue;
+      if(jet_eta_MC[j]>2.5) continue;
       hist_jet_eta_MC->Fill(jet_eta_MC[j], evt_wt);
+
       // JVF cleaning
-      if (jet_pt_MC[j] < 50000. && TMath::Abs(jet_eta_MC[j]) < 2.4) {
-        if (jet_jvf_MC[j] < 0.5) continue;
+      if(jet_pt_MC[j]<50000. && TMath::Abs(jet_eta_MC[j])<2.4){
+        if(jet_jvf_MC[j]<0.5) continue;
       }
       hist_jet_JVF_MC->Fill(jet_jvf_MC[j], evt_wt);
 
       n_jets ++;
 
-      // cut on 0.7892 MV1 and count the number of b-jets
-      if (jet_mv1_MC[j] < 0.7892) continue;
+      // MV1 cut
+      if(jet_mv1_MC[j]<0.7892) continue;
 
       n_bjets ++;
       hist_jet_MV1_MC->Fill(jet_mv1_MC[j], evt_wt);
@@ -590,27 +647,26 @@ void Exercise_4 () {
 
 
     //Fifth cut: At least 4 good jets
-    if (n_jets < 4) continue;
-    cutflow_MC->Fill(5, evt_wt);
+    if(n_jets<4) continue;
     cut_5_MC++;
+    cutflow_MC->Fill(5, evt_wt);
 
     //Sixth cut: at least one b-jet
-    if (n_bjets < 2) continue;
-    cutflow_MC->Fill(6, evt_wt);
+    if(n_bjets<2) continue;
     cut_6_MC++;
+    cutflow_MC->Fill(6, evt_wt);
     hist_nbjets_MC->Fill(n_bjets, evt_wt);
 
     //Seventh cut: MET > 30 GeV
-    if (MET_MC < 30000.) continue;
-    cutflow_MC->Fill(7, evt_wt);
+    if(MET_MC<30000.) continue;
     cut_7_MC++;
-    hist_MET_MC->Fill(MET_MC / 1000, evt_wt);
+    cutflow_MC->Fill(7, evt_wt);
+    hist_MET_MC->Fill(MET_MC/1000, evt_wt);
 
-    // TLorentzVector definitions
+    // TLorentzVector
     TLorentzVector Lepton  = TLorentzVector();
     TLorentzVector  MeT  = TLorentzVector();
 
-    //To complete: Lorentz vectors for the lepton and MET. Use SetPtEtaPhiE().
     Lepton.SetPtEtaPhiE(
       lep_pt_MC[g_lep],
       lep_eta_MC[g_lep],
@@ -625,36 +681,26 @@ void Exercise_4 () {
       MET_MC
     );
 
-    //Calculation of the mTW using TLorentz vectors
+    // Determinate of the mTW
     float mTW = sqrt(2*Lepton.Pt()*MeT.Et()*(1-cos(Lepton.DeltaPhi(MeT))));
 
     //Eight cut: mTW > 30 GeV
-    if (mTW < 30000.) continue;
+    if (mTW<30000.) continue;
     cutflow_MC->Fill(8, evt_wt);
     cut_8_MC++;
-    hist_mTW_MC->Fill(mTW / 1000, evt_wt);
+    hist_mTW_MC->Fill(mTW/1000, evt_wt);
   }
 
-  std::cout << "Done!" << std::endl;
+
   std::cout << "All events:" << nentries_MC << std::endl;
-  std::cout << "Cut1:" << cut_1_MC << std::endl;
-  std::cout << "Cut2:" << cut_2_MC << std::endl;
-  std::cout << "Cut3:" << cut_3_MC << std::endl;
-  std::cout << "Cut4:" << cut_4_MC << std::endl;
-  std::cout << "Cut5:" << cut_5_MC << std::endl;
-  std::cout << "Cut6:" << cut_6_MC << std::endl;
-  std::cout << "Cut7:" << cut_7_MC << std::endl;
-  std::cout << "Cut8:" << cut_8_MC << std::endl;
-
-  std::cout << '\n';
-
-  std::cout << '\n';
-  std::cout << "Saving Histograms" << '\n';
-  std::cout << '\n';
-
-  std::cout << '\n';
-  std::cout << "Histogram for Cuts" << '\n';
-  std::cout << '\n';
+  std::cout << "Cut 1:" << cut_1_MC << std::endl;
+  std::cout << "Cut 2:" << cut_2_MC << std::endl;
+  std::cout << "Cut 3:" << cut_3_MC << std::endl;
+  std::cout << "Cut 4:" << cut_4_MC << std::endl;
+  std::cout << "Cut 5:" << cut_5_MC << std::endl;
+  std::cout << "Cut 6:" << cut_6_MC << std::endl;
+  std::cout << "Cut 7:" << cut_7_MC << std::endl;
+  std::cout << "Cut 8:" << cut_8_MC << std::endl;
 
   canvas->SetLogy();
   cutflow->SetMarkerStyle(21);
@@ -665,126 +711,106 @@ void Exercise_4 () {
   canvas->Print("MonteCarloVSData/cutflow.pdf");
   canvas->Clear();
 
-  std::cout << '\n';
-  std::cout << "Histogram for Leptons" << '\n';
-  std::cout << '\n';
-
-  hist_lep_pt_MC->SetFillColor(kCyan);
-  hist_lep_pt_MC->Draw("HIST");
   hist_lepton_pt->SetMarkerStyle(21);
   hist_lepton_pt->SetMarkerColor(kTeal);
-  hist_lepton_pt->Draw("SAME");
+  hist_lepton_pt->Draw("E");
+  hist_lep_pt_MC->SetFillColor(kCyan);
+  hist_lep_pt_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_lep_pt.pdf");
   canvas->Clear();
 
-  hist_lep_pt_cone_30_MC->SetFillColor(kCyan);
-  hist_lep_pt_cone_30_MC->Draw("HIST");
   hist_lepton_pt_cone_30->SetMarkerStyle(21);
   hist_lepton_pt_cone_30->SetMarkerColor(kTeal);
-  hist_lepton_pt_cone_30->Draw("SAME");
+  hist_lepton_pt_cone_30->GetYaxis()->SetRangeUser(1, 100000000);
+  hist_lepton_pt_cone_30->Draw("E");
+  hist_lep_pt_cone_30_MC->SetFillColor(kCyan);
+  hist_lep_pt_cone_30_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_lep_pt_cone_30.pdf");
   canvas->Clear();
 
-  hist_lep_et_cone_20_MC->SetFillColor(kCyan);
-  hist_lep_et_cone_20_MC->Draw("HIST");
   hist_lepton_et_cone_20->SetMarkerStyle(21);
   hist_lepton_et_cone_20->SetMarkerColor(kTeal);
-  hist_lepton_et_cone_20->Draw("SAME");
+  hist_lepton_et_cone_20->GetYaxis()->SetRangeUser(1, 10000000);
+  hist_lepton_et_cone_20->Draw("E");
+  hist_lep_et_cone_20_MC->SetFillColor(kCyan);
+  hist_lep_et_cone_20_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_lep_et_cone_20.pdf");
   canvas->Clear();
 
-  hist_lep_eta_MC->SetFillColor(kTeal);
-  hist_lep_eta_MC->Draw("HIST");
   hist_lep_eta->SetMarkerStyle(21);
   hist_lep_eta->SetMarkerColor(kTeal);
-  hist_lep_eta->Draw("SAME");
+  hist_lep_eta->GetYaxis()->SetRangeUser(100, 1000000);
+  hist_lep_eta->Draw("E");
+  hist_lep_eta_MC->SetFillColor(kTeal);
+  hist_lep_eta_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_lep_eta.pdf");
   canvas->Clear();
 
-  std::cout << '\n';
-  std::cout << "Histogram for Jets" << '\n';
-  std::cout << '\n';
-
-  hist_njets_MC->SetFillColor(kBlue);
-  hist_njets_MC->Draw("HIST");
   hist_njets->SetMarkerStyle(21);
   hist_njets->SetMarkerColor(kTeal);
-  hist_njets->Draw("SAME");
+  hist_njets->Draw("E");
+  hist_njets_MC->SetFillColor(kBlue);
+  hist_njets_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_njets.pdf");
   canvas->Clear();
 
-
-  hist_jet_pt_MC->SetFillColor(kBlue);
-  hist_jet_pt_MC->Draw("HIST");
   hist_jets_pt->SetMarkerStyle(21);
   hist_jets_pt->SetMarkerColor(kTeal);
-  hist_jets_pt->Draw("SAME");
+  hist_jets_pt->Draw("E");
+  hist_jet_pt_MC->SetFillColor(kBlue);
+  hist_jet_pt_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_jet_pt.pdf");
   canvas->Clear();
 
-
-  hist_jet_eta_MC->SetFillColor(kBlue);
-  hist_jet_eta_MC->Draw("HIST");
   hist_jets_eta->SetMarkerStyle(21);
   hist_jets_eta->SetMarkerColor(kTeal);
-  hist_jets_eta->Draw("SAME");
+  hist_jets_eta->Draw("E");
+  hist_jet_eta_MC->SetFillColor(kBlue);
+  hist_jet_eta_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_jet_eta.pdf");
   canvas->Clear();
 
-  hist_jet_JVF_MC->SetFillColor(kBlue);
-  hist_jet_JVF_MC->Draw("HIST");
   hist_jets_JVF->SetMarkerStyle(21);
   hist_jets_JVF->SetMarkerColor(kTeal);
-  hist_jets_JVF->Draw("SAME");
+  hist_jets_JVF->GetXaxis()->SetRangeUser(0, 1);
+  hist_jets_JVF->GetYaxis()->SetRangeUser(1, 100000);
+  hist_jets_JVF->Draw("E");
+  hist_jet_JVF_MC->SetFillColor(kBlue);
+  hist_jet_JVF_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_jet_JVF.pdf");
   canvas->Clear();
 
-  hist_jet_MV1_MC->SetFillColor(kBlue);
-  hist_jet_MV1_MC->Draw("HIST");
   hist_jets_MV1->SetMarkerStyle(21);
   hist_jets_MV1->SetMarkerColor(kTeal);
-  hist_jets_MV1->Draw("SAME");
+  hist_jets_MV1->GetYaxis()->SetRangeUser(1, 1000000);
+  hist_jets_MV1->Draw("E");
+  hist_jet_MV1_MC->SetFillColor(kBlue);
+  hist_jet_MV1_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_jet_MV1.pdf");
   canvas->Clear();
 
-  std::cout << '\n';
-  std::cout << "Histogram for b-Jets" << '\n';
-  std::cout << '\n';
-
-  hist_nbjets_MC->SetFillColor(kRed);
-  hist_nbjets_MC->Draw("HIST");
   hist_nbjets->SetMarkerStyle(21);
   hist_nbjets->SetMarkerColor(kTeal);
-  hist_nbjets->Draw("SAME");
+  hist_nbjets->Draw("E");
+  hist_nbjets_MC->SetFillColor(kRed);
+  hist_nbjets_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_nbjets.pdf");
   canvas->Clear();
   canvas->SetLogy(false);
 
-  std::cout << '\n';
-  std::cout << "Histogram for MET" << '\n';
-  std::cout << '\n';
-
-  hist_MET_MC->SetFillColor(kGreen);
-  hist_MET_MC->Draw("HIST");
   hist_MET->SetMarkerStyle(21);
   hist_MET->SetMarkerColor(kTeal);
-  hist_MET->Draw("SAME");
+  hist_MET->Draw("E");
+  hist_MET_MC->SetFillColor(kGreen);
+  hist_MET_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_MET.pdf");
   canvas->Clear();
 
-  std::cout << '\n';
-  std::cout << "Histogram for mTW" << '\n';
-  std::cout << '\n';
-
-  hist_mTW_MC->SetFillColor(kAzure);
-  hist_mTW_MC->Draw();
   hist_mTW->SetMarkerStyle(21);
   hist_mTW->SetMarkerColor(kTeal);
-  hist_mTW->Draw("SAME");
+  hist_mTW->Draw("E");
+  hist_mTW_MC->SetFillColor(kAzure);
+  hist_mTW_MC->Draw("SAMEH");
   canvas->Print("MonteCarloVSData/hist_mTW.pdf");
   canvas->Clear();
-
-  std::cout << '\n';
-  std::cout << '\n';
-  std::cout << "Done" << '\n';
 }
